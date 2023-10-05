@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'popregular';
+    src: url("/Poppins-Regular.ttf");
+}
+body{
+    font-family: 'popregular', sans-serif;
+    background: white;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .paper{
+        background: lightgray;
+        border: 2px solid rgba(255,242,242);
+        border-radius: 9px;
+        padding: 2em 1em;
+        text-align: center;
+        font-size: 2rem;
+        width: 300px;
+        &::before, 
+        &::after{
+            content: "";
+            height: 4rem;
+            position: absolute;
+            width: 50%;
+            bottom: 1rem;
+            box-shadow: 0 1rem 0.5rem rgba(0,0,0,0.7);
+            z-index: -2;
+        }
+        &::before{
+            left: 0.5rem;
+            transform: rotate(-5deg);
+        }
+        &::after{
+            right: 0.5rem;
+            transform: rotate(5deg);
+        }
+    }
+}
